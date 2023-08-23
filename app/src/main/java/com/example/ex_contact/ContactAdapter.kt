@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ex_contact.alima.slideRight
 import com.example.ex_contact.databinding.ItemListBinding
 import com.example.ex_contact.model.Contact
 
@@ -39,20 +40,15 @@ class ContactAdapter(private val context: Context, private val contactList: List
             binding.textItem2.text = contact.tel
             binding.textItem3.text = if (contact.Bookmark) "⭐️" else "❌"
 
-     /*       binding.root.setOnClickListener{
-                val intent = Intent(Intent.ACTION_CALL)
-                intent.data = Uri.parse("tel:${contact.tel}")
-
-                if(ActivityCompat.checkSelfPermission(context,Manifest.permission.CALL_PHONE)==PackageManager.PERMISSION_GRANTED){
-                    context.startActivity(intent)
-                }else{
-                    ActivityCompat.requestPermissions(
-                        context as Activity,
-                        arrayOf(Manifest.permission.CALL_PHONE),
-                        REQUEST_CALL_PERMISSION
-                    )
-                }
-            }*/
+            binding.root.setOnClickListener{
+                val phoneNum = contact.tel
+                val intent = Intent(Intent.ACTION_DIAL)
+                intent.data = Uri.parse("tel:$phoneNum")
+                context.startActivity(intent)
+                (context as? Activity)?.slideRight()
+            }
         }
+
+
     }
 }
