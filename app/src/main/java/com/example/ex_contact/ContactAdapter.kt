@@ -42,7 +42,7 @@ class ContactAdapter(private val context: Context, private val contactList: List
 
             binding.root.setOnClickListener{
                 val phoneNum = contact.tel
-                val intent = Intent(Intent.ACTION_DIAL)
+                val intent = Intent(Intent.ACTION_CALL)
                 intent.data = Uri.parse("tel:$phoneNum")
                 context.startActivity(intent)
                 (context as? Activity)?.slideRight()
