@@ -10,13 +10,30 @@
       android:id="@+id/tb_main"
       layout="@layout/main_toolbar" />
 
+  <TextView
+      android:layout_width="192dp"
+      android:layout_height="51dp"
+      android:text="전화번호부"
+      android:gravity="center"
+      android:textStyle="bold"
+      android:textSize="30dp"
+      app:layout_constraintBottom_toBottomOf="@+id/tb_main"
+      app:layout_constraintEnd_toEndOf="@+id/tb_main"
+      app:layout_constraintStart_toStartOf="@+id/tb_main"
+      app:layout_constraintTop_toTopOf="@+id/tb_main" />
+
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/listview"
       android:layout_width="match_parent"
       android:layout_height="0dp"
+      android:clipToPadding="false"
+      android:paddingTop="9dp"
+      android:paddingBottom="9dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/tb_main" />
+      app:layout_constraintTop_toBottomOf="@+id/tb_main"
+      app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
