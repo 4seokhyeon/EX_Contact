@@ -14,18 +14,18 @@ import com.example.ex_contact.alima.slideRight
 import com.example.ex_contact.databinding.ItemListBinding
 import com.example.ex_contact.model.Contact
 
-class ContactAdapter(private val context: Context, private val contactList: List<Contact>) :
-    RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() {
+class ContactAdapter(private val context: Context, private val contactList: List<Contact>) ://어댑터 클래스를 정의
+    RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() { //생성자는 context, contactList를 받는다
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         val binding = ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ContactViewHolder(binding)
-    }
+    }// 각 아이템 뷰를 생성하는 역할
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         val currentContact = contactList[position]
-        holder.bind(currentContact)
-    }
+        holder.bind(currentContact) //뷰 홀더에 데이터를 바인딩함
+    }//position 현쟈 아이템의 위치를 나타냄
 
     override fun getItemCount(): Int {
         return contactList.size
