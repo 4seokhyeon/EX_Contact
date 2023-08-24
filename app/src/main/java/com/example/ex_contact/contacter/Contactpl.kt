@@ -29,7 +29,7 @@ class Contactpl private constructor() : ContactManager {
                 8 -> R.drawable.per9
                 else -> R.drawable.per10
             }
-            val contact = Contact(profile, "이름 : $i", "번호 : 010-202$i-333$i",i % 2 == 0)
+            val contact = Contact(profile, "이름 : $i", "010-202$i-333$i",i % 2 == 0)
             memberList.add(contact)
         }
         return memberList
