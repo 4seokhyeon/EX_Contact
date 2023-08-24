@@ -8,7 +8,6 @@
 리사이클러뷰를 이용해서 전화번호부를 리스트의 형태로 출력
 
 ### 2. 추가구현
-![ezgif com-video-to-gif (5)](https://github.com/4seokhyeon/EX_Contact/assets/106301222/5630f98c-11fc-4588-922e-dc4b59e75bce)
-
+![ezgif com-video-to-gif (5)](https://github.com/4seokhyeon/EX_Contact/assets/106301222/332da181-5dd9-4b43-97ef-8e81c1ff67b9)
 
 리스트 클릭 이벤트를 구현해 줌으로써 리스트를 클릭시에 바로 전화가 걸림
