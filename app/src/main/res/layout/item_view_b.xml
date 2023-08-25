@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    android:background="@drawable/coner"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/itemimg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@color/black"
+        android:background="@drawable/coner"
+        android:padding="@dimen/icon_padding"
+        android:scaleType="centerInside"
+        android:transitionName="image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:transitionName="name"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@id/itemimg"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/itemtel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tel"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/itemimg"
+        app:layout_constraintTop_toBottomOf="@id/itemName"/>
+
+    <TextView
+        android:id="@+id/favor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="favorite"
+        android:padding="@dimen/list_item_padding"
+        android:textColor="@color/black"
+        android:textSize="@dimen/list_item_text_size2"
+        app:layout_constraintEnd_toStartOf="@+id/itemimg"
+        app:layout_constraintTop_toBottomOf="@+id/itemtel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
